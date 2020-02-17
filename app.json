@@ -1,0 +1,28 @@
+{
+  "name": "Build Tracker",
+  "description": "Track your application's performance budgets",
+  "keywords": ["performance", "budgets"],
+  "website": "https://buildtracker.dev",
+  "repository": "https://github.com/paularmstrong/build-tracker",
+  "logo": "https://buildtracker.dev/img/logo.svg",
+  "env": {
+    "BT_API_AUTH_TOKEN": {
+      "description": "API Auth token",
+      "generator": "secret"
+    },
+    "BT_DEFAULT_BRANCH": {
+      "description": "The branch that will be tracked on your repository",
+      "value": "master"
+    },
+    "BT_URL": {
+      "description": "The URL of your Build Tracker instance (set this up later)",
+      "value": "http://example.com"
+    }
+  },
+  "image": "heroku/nodejs",
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ]
+}
