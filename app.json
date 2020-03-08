@@ -15,8 +15,8 @@
       "value": "master"
     },
     "BT_URL": {
-      "description": "The URL of your Build Tracker instance (set this up later)",
-      "value": "http://example.com"
+      "description": "The URL of your Build Tracker instance. Replace `<app-name>` with the same name as you configure for Heroku",
+      "value": "http://<app-name>.herokuapp.com"
     }
   },
   "image": "heroku/nodejs",
