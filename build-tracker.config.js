@@ -1,12 +1,24 @@
 const withPostgres = require('@build-tracker/plugin-with-postgres').default;
 
 module.exports = withPostgres({
-  artifacts: {},
+  artifacts: {
+    // https://buildtracker.dev/docs/budgets
+    budgets: {
+      '*': [
+        {
+          level: BudgetLevel.WARN,
+          sizeKey: 'stat',
+          type: BudgetType.PERCENT_DELTA,
+          maximum: 0.05,
+        },
+      ],
+    },
+  },
   defaultBranch: process.env.BT_DEFAULT_BRANCH,
   pg: {
     connectionString: process.env.DATABASE_URL,
-    ssl: true
+    ssl: true,
   },
   port: process.env.PORT,
-  url: process.env.BT_URL
+  url: process.env.BT_URL,
 });
