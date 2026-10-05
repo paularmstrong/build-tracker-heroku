@@ -1,5 +1,7 @@
 # Build Tracker on Heroku
 
+[![Deploy to Railyard](https://app.railyard.run/deploy/badge)](https://app.railyard.run/deploy?repo=https://github.com/paularmstrong/build-tracker-heroku)
+
 Quickly create a new Build Tracker deployment on Heroku
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
